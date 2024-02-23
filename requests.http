@@ -1,0 +1,81 @@
+### Create Order 
+
+POST http://localhost:8080/odata/v4/OrdersService/Orders
+Content-Type: application/json
+Authorization: Basic mia:pass_mia
+
+{
+  "items": [
+    {
+      "book_ID": "abed2f7a-c50e-4bc5-89fd-9a00a54b4b16",
+      "amount": 3
+    }
+  ]
+}
+
+
+
+### Create order as admin 
+
+post http://localhost:8080/odata/v4/OrdersService/Orders
+Content-Type: application/json
+Authorization: Basic admin:nimda
+
+{
+"items": [
+{
+"book_ID": "fd0c5fda-8811-4e20-bcff-3a776abc290a",
+"amount": 3
+}
+]
+}
+
+
+
+
+### Read Products
+
+GET http://localhost:8080/odata/v4/AdminService/Products
+Accept: application/json
+Authorization: Basic admin:nimda
+
+
+
+
+
+### Create Order as user
+
+POST http://localhost:8080/odata/v4/OrdersService/Orders
+Content-Type: application/json
+Authorization: Basic syed:nimda
+
+{
+  "items": [
+    {
+      "book_ID": "fd0c5fda-8811-4e20-bcff-3a776abc290a",
+      "amount": 1
+    }
+  ]
+}
+
+
+
+### Read Orders as user
+
+GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
+Accept: application/json
+Authorization: Basic syed:nimda
+
+
+
+### Read Orders as Admin (Administrator)
+
+GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
+Accept: application/json
+Authorization: Basic admin:nimda
+
+
+
+
+
+

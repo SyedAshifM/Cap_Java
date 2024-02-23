@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "security.mock.users",
+    "type": "java.lang.String",
+    "description": "A description for 'security.mock.users'"
+  },
+  {
+    "name": "cds.datasource.auto-config.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'cds.datasource.auto-config.enabled'"
+  },
+  {
+    "name": "cds.security.mock.-name",
+    "type": "java.lang.String",
+    "description": "A description for 'cds.security.mock.-name'"
+  }
+]}
