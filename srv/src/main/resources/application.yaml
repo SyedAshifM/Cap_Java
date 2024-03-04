@@ -21,9 +21,11 @@ cds:
           additional:
             firstName: syed
             lastName: basha
-            email: asif.sierra@mail.com  
+            email: asif.sierra@mail.com
         - name: mia
           password: pass_mia
+          roles:
+            - Viewer
           additional:
             firstName: Mia
             lastName: Bonnellac

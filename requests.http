@@ -8,7 +8,7 @@ Authorization: Basic mia:pass_mia
   "items": [
     {
       "book_ID": "abed2f7a-c50e-4bc5-89fd-9a00a54b4b16",
-      "amount": 3
+      "amount": 1
     }
   ]
 }
@@ -67,15 +67,15 @@ Accept: application/json
 Authorization: Basic syed:nimda
 
 
-
-### Read Orders as Admin (Administrator)
+## Read Orders as Admin (Administrator)
 
 GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
 Accept: application/json
 Authorization: Basic admin:nimda
 
 
+### Read Orders as Mia (Viewer)
 
-
-
-
+GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
+Accept: application/json
+Authorization: Basic mia:pass_mia

@@ -6,8 +6,10 @@ import com.sap.cds.services.handler.annotations.ServiceName;
 
 import org.springframework.stereotype.Component;
 
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+
 
 import com.sap.cds.ql.Select;
 import com.sap.cds.ql.Update;
@@ -69,6 +71,7 @@ public class OrdersService implements EventHandler {
         }
     }
 
+
     @After(event = { CqnService.EVENT_READ, CqnService.EVENT_CREATE }, entity = OrderItems_.CDS_NAME)
 public void calculateNetAmount(List<OrderItems> items) {
     for (OrderItems item : items) {
@@ -106,6 +109,5 @@ public void calculateTotal(List<Orders> orders) {
         order.setTotal(total);
     }
 }
-
 
 }
