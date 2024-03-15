@@ -31,8 +31,6 @@ Authorization: Basic admin:nimda
 }
 
 
-
-
 ### Read Products
 
 GET http://localhost:8080/odata/v4/AdminService/Products
@@ -67,7 +65,7 @@ Accept: application/json
 Authorization: Basic syed:nimda
 
 
-## Read Orders as Admin (Administrator)
+### Read Orders as Admin (Administrator)
 
 GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
 Accept: application/json
@@ -79,3 +77,13 @@ Authorization: Basic admin:nimda
 GET http://localhost:8080/odata/v4/OrdersService/Orders?$expand=items
 Accept: application/json
 Authorization: Basic mia:pass_mia
+
+
+
+# Delete Orders
+
+
+DELETE http://localhost:8080/odata/v4/OrdersService/Orders/697fc1ae-a5fd-43da-96e0-40c93d6f432d
+Content-Type: application/json
+Authorization: Basic admin:nimda
+
